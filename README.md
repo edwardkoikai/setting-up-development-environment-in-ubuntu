@@ -19,15 +19,15 @@ This repository contains basic steps and commands for easily seting up ubuntu wo
 ### I nstalling pyenv
 1. Install pyenv using [pyenv-installer](https://github.com/pyenv/pyenv-installer) by running this command:
 ```bash
-$ curl https://pyenv.run | bash
+ curl https://pyenv.run | bash
 ```
 2. Open your `.zshrc` or `.bashrc` file with the following command:
 ```bash
-$ code ~/.zshrc
+ code ~/.zshrc
 ```
 or 
 ```bash
-$ code ~/.bashrc
+ code ~/.bashrc
 ```
 3. Add the following lines
 ```
@@ -40,11 +40,11 @@ eval "$(pyenv init --path)"
 ### Installing Dependencies on Ubuntu
 1. First run this command to update your apt repositories:
 ```bash
-$ sudo apt update
+ sudo apt update
 ```
 2. Next, run this command to install the packages listed on the pyenv:
 ```bash
-$ sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
+ sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
 xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git
  ```
@@ -52,18 +52,18 @@ xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git
 ### Installing Python
 1. Run the following command to install Python (*Replace 3.8.13 with the python version you want to install*):
 ```bash
-$ pyenv install 3.8.13
+ pyenv install 3.8.13
 ```
 After some time this should complete without any errors. It could take a while since you are compiling Python from source code.
 2. Once this is finished we also need to tell pyenv this is our default version of Python using this command(*Replace 3.8.13 with the python version you want to be your default version*):
 ```bash
-$ pyenv global 3.8.13
+ pyenv global 3.8.13
 ```
 3. Ensure that these changes take effect by closing your terminal and opening a new one.
 4. Verify your installation by typing
 ```bash
-$ python --version
-$ python3 --version
+ python --version
+ python3 --version
 ```
 Both of these commands should show 3.8.13
 
