@@ -147,4 +147,53 @@ ssh -T git@bitbucket.org
 
 *If the **"Visual Studio Code"** application opens when you type code in the "Ubuntu" application, your vscode has been configured successfully*
 
+## Installing MYSQL and PHPMYAdmin on WSL
 
+1. Update your system by
+```bash
+sudo apt update
+```
+2. Then upgrade 
+```bash
+sudo apt upgrade -y
+```
+3. Install MYSQL Server
+```bash
+sudo apt install mysql-server
+```
+4. Check the list of running services to ensure mysql is running
+```bash
+service --status-all
+```
+5. Run the MYSQL secure installation script. 
+```bash
+sudo mysql_secure_installation
+```
+ - When asked if you want to impose password security you can type **yes** or **NO** depending. *If you know you will forget the password i'd recommend not seeting one*
+ - For password difficult select 2
+ - The remaining questions you should select **yes** for all of them
+6. Type `sudo mysql` to access the myql
+7. Use the following command to set a MYSQL password for the root user and also change its authentication method to MYSQL Native password
+```sql
+alter user ‘root’@‘localhost’ identified with mysql_native_password by ‘Password1’;
+```
+8. To login to mysql type the following command input your password
+```bash
+msql -u root -p
+```
+9. Install phpMyadmin
+```bash
+sudo apt install phpmyadmin
+```
+10. When you get the dialogue to choose the web server, choose **Apache 2**
+11. When asked to use Auto configuration choose **No**
+12. Install php
+```bash
+sudo apt install php
+```
+13. Login to the database using phpmyadmin by typing the following command and copying the ip address
+```bash
+ip a
+```
+14. Go to your browser and paste the ip copied above. Add **/phpmyadmin** infront of the the ip 
+eg
