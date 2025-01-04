@@ -2,6 +2,7 @@
 
 This repository contains basic steps and commands for easily seting up ubuntu workstation
 
+
 ## Installing Nodejs
 ### Install Nvm
 1. Install Node Version Manager(NVM) but downloading it from the [Node Version Manager]( https://nodejs.org/en/download/package-manager/current ) official website.
@@ -130,5 +131,20 @@ cat ~/.ssh/id_ed25519.pub
 ```bash
 ssh -T git@bitbucket.org
 ```
+
+## **Configure VS Code to Work with WSL**
+1. Open the "Visual Studio Code" application using the "Start" menu
+2. Click **"View"** in the toolbar, then click **"Extensions"** in the dropdown menu, or use the shortcut `<Control>` + `<Shift>` + `X`.
+3. Search for **"WSL"** and click on the item in the list with a description that starts with "Open any folder in the Windows Subsystem for Linux (WSL) …".
+4. Click the **"Install"** button near the top of the page
+5. Click **"Terminal"** in the toolbar, then click **"New Terminal"** (Note: a new terminal should appear at the bottom of your VS Code window)
+6. If the dropdown in your terminal says **"1: wsl"**, continue to step 9. Otherwise, click on the dropdown in the terminal that says **"1: powershell"** and choose **"Select Default Profile"**
+7. A dropdown should appear at the top of your VS Code window
+8. Click on **"Ubuntu (WSL)"** to enable VS Code to display your Ubuntu terminal
+9. Close the **"Visual Studio Code"** application
+10. Open the **"Ubuntu"** application using the "Start" menu
+11. Type ``code`` and press `<Enter>`
+
+*If the **"Visual Studio Code"** application opens when you type code in the "Ubuntu" application, your vscode has been configured successfully*
 
 
